@@ -1,0 +1,16 @@
+import = [
+	"~/.config/alacritty/catppuccin-frappe.toml"
+]
+
+[window]
+decorations = "None"
+startup_mode = "Maximized"
+
+[font]
+size = 10
+normal = { family = "NotoSansM Nerd Font", style = "Reglar" }
+offset = { x = 0, y = -1 }
+
+[shell]
+program = "tmux"
+args = ["new-session", "-A", "-D", "-s", "main"]
