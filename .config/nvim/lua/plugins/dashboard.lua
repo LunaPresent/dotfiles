@@ -1,10 +1,8 @@
-local builtin = require("telescope.builtin")
-
 return {
 	{
 		"nvimdev/dashboard-nvim",
 		event = "VimEnter",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		dependencies = { "nvim-tree/nvim-web-devicons", "telescope.nvim" },
 		opts = {
 			theme = "doom",
 			config = {
@@ -21,9 +19,9 @@ return {
 				},
 				center = {
 					{ icon = " ", key = "n", desc = "New File", action = "enew" },
-					{ icon = " ", key = "f", desc = "Find File", action = builtin.find_files },
-					{ icon = " ", key = "/", desc = "Find Text", action = builtin.live_grep },
-					{ icon = " ", key = "r", desc = "Recent Files", action = builtin.oldfiles },
+					{ icon = " ", key = "f", desc = "Find File", action = require("telescope.builtin").find_files },
+					{ icon = " ", key = "/", desc = "Find Text", action = require("telescope.builtin").live_grep },
+					{ icon = " ", key = "r", desc = "Recent Files", action = require("telescope.builtin").oldfiles },
 					{
 						icon = " ",
 						key = "c",
@@ -36,7 +34,7 @@ return {
 							if vim.fn.filereadable(session_dir .. config_session_filename) == 1 then
 								require("persistence").load()
 							else
-								builtin.find_files()
+								require("telescope.builtin").find_files()
 							end
 						end,
 					},
