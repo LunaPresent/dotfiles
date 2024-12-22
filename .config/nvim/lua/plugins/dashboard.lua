@@ -28,24 +28,18 @@ return {
 						desc = "Config",
 						action = function()
 							local session_dir = vim.fn.stdpath("state") .. "/sessions/"
-							local config_dir = vim.fn.stdpath("config")
-							local config_session_filename = config_dir:gsub("/", "%%") .. ".vim"
-							vim.api.nvim_set_current_dir(config_dir)
-							if vim.fn.filereadable(session_dir .. config_session_filename) == 1 then
-								require("persistence").load()
+							local config_session_filename = "dashboard-config"
+							if vim.fn.filereadable(session_dir .. config_session_filename .. ".vim") == 1 then
+								vim.cmd("SessionRestore " .. config_session_filename)
 							else
-								require("telescope.builtin").find_files()
+								local config_dir = vim.fn.stdpath("config")
+								vim.api.nvim_set_current_dir(config_dir)
+								vim.cmd("e init.lua")
+								vim.cmd("SessionSave " .. config_session_filename)
 							end
 						end,
 					},
-					{
-						icon = " ",
-						key = "s",
-						desc = "Restore Session",
-						action = function()
-							require("persistence").select()
-						end
-					},
+					{ icon = " ", key = "s", desc = "Restore Session", action = "SessionSearch" },
 					{ icon = "󰒲 ", key = "l", desc = "Lazy", action = "Lazy" },
 					{ icon = " ", key = "q", desc = "Quit", action = "qa" },
 				},
