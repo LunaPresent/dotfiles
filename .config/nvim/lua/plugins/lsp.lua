@@ -23,6 +23,7 @@ return {
 			lspcfg.lua_ls.setup({})
 			lspcfg.rust_analyzer.setup({})
 			lspcfg.clangd.setup({})
+			lspcfg.sqls.setup({})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
@@ -39,7 +40,6 @@ return {
 						{ desc = "Code actions", buffer = buf })
 					vim.keymap.set("n", "<leader>ld", vim.lsp.buf.type_definition,
 						{ desc = "Type definition", buffer = buf })
-					vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format document", buffer = buf })
 					vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename", buffer = buf })
 				end,
 			})

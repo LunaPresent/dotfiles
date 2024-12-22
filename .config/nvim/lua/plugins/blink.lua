@@ -2,7 +2,9 @@ return {
 	{
 		"saghen/blink.cmp",
 		version = "*",
-		dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = {
+			{ "rafamadriz/friendly-snippets", },
+		},
 		event = { "InsertEnter", "CmdlineEnter" },
 		opts = {
 			appearance = {
@@ -11,6 +13,15 @@ return {
 			completion = {
 				list = {
 					selection = "manual",
+				},
+			},
+			sources = {
+				default = { "lsp", "path", "snippets", "buffer", "dadbod" },
+				providers = {
+					dadbod = {
+						name = "Dadbod",
+						module = "vim_dadbod_completion.blink",
+					},
 				},
 			},
 			keymap = {

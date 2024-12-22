@@ -7,7 +7,8 @@ return {
 			root_dir = vim.fn.stdpath("state") .. "/sessions/",
 			auto_restore = false,
 			suppressed_dirs = { "~/", "~/code", "~/Downloads", "/" },
-			bypass_save_filetypes = { "dashboard" },
+			bypass_save_filetypes = { "dashboard", "dbui", "dbout" },
+			close_unsupported_windows = true,
 		},
 	},
 }
