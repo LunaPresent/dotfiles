@@ -12,6 +12,7 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"rust_analyzer",
+				"clangd",
 			},
 		},
 	},
@@ -21,6 +22,7 @@ return {
 			local lspcfg = require("lspconfig")
 			lspcfg.lua_ls.setup({})
 			lspcfg.rust_analyzer.setup({})
+			lspcfg.clangd.setup({})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
