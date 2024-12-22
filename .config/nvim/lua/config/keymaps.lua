@@ -19,14 +19,15 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll half page up" })
 vim.keymap.set("n", "n", "nzzzv", { desc = "Find next" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Find previous" })
 
-vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without overwriting register" })
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without overwriting register" })
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
-vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank to system clipboard" })
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Silent paste" })
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Silent delete" })
+vim.keymap.set("n", "<leader>D", [["_D]], { desc = "Silent delete" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank to clipboard" })
 
 vim.keymap.set(
 	"n",
 	"<leader>r",
 	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-	{ desc = "Replace all instances of word" }
+	{ desc = "Replace all matching" }
 )
