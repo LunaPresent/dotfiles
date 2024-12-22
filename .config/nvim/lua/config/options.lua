@@ -8,6 +8,7 @@ vim.opt.list = true
 vim.opt.mouse = "a"
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.undofile = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 0
