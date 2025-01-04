@@ -18,7 +18,7 @@ return {
 			"DBUIFindBuffer",
 		},
 		keys = {
-			{ "<leader>qo", "<cmd>DBUI<cr>", desc = "dadbod ui" }
+			{ "<leader>qd", "<cmd>DBUI<cr>", desc = "dadbod ui" }
 		},
 		init = function()
 			vim.g.db_ui_use_nerd_fonts = 1

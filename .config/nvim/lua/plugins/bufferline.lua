@@ -26,9 +26,11 @@ return {
 			{ "<leader>bb", "<cmd>BufferLinePick<cr>",                 desc = "Pick buffer" },
 			{ "<leader>bp", "<cmd>BufferLineTogglePin<cr>",            desc = "Toggle Pin" },
 			{ "<leader>bD", "<cmd>BufferLineGroupClose ungrouped<cr>", desc = "Delete Non-Pinned Buffers" },
+			{ "<leader>bo", "<cmd>BufferLineCloseOthers<cr>",          desc = "Delete Other Buffers" },
 			{ "<leader>br", "<cmd>BufferLineCloseRight<cr>",           desc = "Delete Buffers to the Right" },
 			{ "<leader>bl", "<cmd>BufferLineCloseLeft<cr>",            desc = "Delete Buffers to the Left" },
 			{ "<leader>bd", "<cmd>bd<cr>",                             desc = "Delete Current Buffer" },
+			{ "<leader>bq", "<cmd>bd!<cr>",                            desc = "Force Delete Current Buffer" },
 		},
 	},
 }
