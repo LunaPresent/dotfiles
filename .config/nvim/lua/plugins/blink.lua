@@ -12,7 +12,7 @@ return {
 			},
 			completion = {
 				list = {
-					selection = "manual",
+					selection = { preselect = false, auto_insert = true },
 				},
 			},
 			sources = {
