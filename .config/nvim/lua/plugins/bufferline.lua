@@ -29,7 +29,7 @@ return {
 			{ "<leader>bo", "<cmd>BufferLineCloseOthers<cr>",          desc = "Delete Other Buffers" },
 			{ "<leader>br", "<cmd>BufferLineCloseRight<cr>",           desc = "Delete Buffers to the Right" },
 			{ "<leader>bl", "<cmd>BufferLineCloseLeft<cr>",            desc = "Delete Buffers to the Left" },
-			{ "<leader>bd", "<cmd>bd<cr>",                             desc = "Delete Current Buffer" },
+			{ "<leader>bd", "<cmd>bp<bar>sp<bar>bn<bar>bd<cr>",        desc = "Delete Current Buffer" },
 			{ "<leader>bq", "<cmd>bd!<cr>",                            desc = "Force Delete Current Buffer" },
 		},
 	},
