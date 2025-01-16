@@ -19,4 +19,6 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
 
+vim.opt.foldmethod = "marker"
+
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
