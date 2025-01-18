@@ -31,3 +31,6 @@ vim.keymap.set(
 	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 	{ desc = "Replace all matching" }
 )
+
+vim.keymap.set("n", "<Esc>", "<cmd>noh<cr>", { desc = "Clear search" })
+vim.keymap.set("n", "<C-c>", "<cmd>noh<cr>", { desc = "Clear search" })

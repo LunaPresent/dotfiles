@@ -20,5 +20,7 @@ vim.opt.wrap = false
 vim.opt.scrolloff = 8
 
 vim.opt.foldmethod = "marker"
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
