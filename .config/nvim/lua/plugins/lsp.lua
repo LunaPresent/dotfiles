@@ -23,7 +23,6 @@ return {
 			lspcfg.lua_ls.setup({})
 			lspcfg.rust_analyzer.setup({})
 			lspcfg.clangd.setup({})
-			lspcfg.sqls.setup({})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)

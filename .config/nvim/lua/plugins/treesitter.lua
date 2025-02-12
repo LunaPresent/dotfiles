@@ -32,6 +32,7 @@ return {
 					"query",
 					"regex",
 					"rust",
+					"sql",
 					"toml",
 					"tsx",
 					"typescript",

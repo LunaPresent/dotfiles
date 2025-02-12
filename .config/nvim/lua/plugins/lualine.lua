@@ -4,6 +4,7 @@ return {
 		event = "VeryLazy",
 		opts = function()
 			return {
+				theme = "catppuccin",
 				sections = {
 					lualine_x = {
 						{

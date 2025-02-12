@@ -1,6 +1,7 @@
 return {
 	{
 		"akinsho/bufferline.nvim",
+		after = "catppuccin",
 		event = "VeryLazy",
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
@@ -11,7 +12,8 @@ return {
 					style_preset = bufferline.style_preset.no_italic,
 					always_show_bufferline = false,
 					auto_toggle_bufferline = true,
-				}
+				},
+				highlights = require("catppuccin.groups.integrations.bufferline").get(),
 			})
 
 			require("which-key").add({

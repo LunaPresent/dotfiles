@@ -16,7 +16,7 @@ return {
 				},
 			},
 			sources = {
-				default = { "lsp", "path", "snippets", "buffer", "dadbod" },
+				default = { "dadbod", "lsp", "path", "snippets", "buffer", },
 				providers = {
 					dadbod = {
 						name = "Dadbod",
