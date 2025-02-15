@@ -1,0 +1,3 @@
+# ~/.bashrc
+
+exec fish
