@@ -4,7 +4,10 @@ return {
 		event = "VeryLazy",
 		opts = function()
 			return {
-				theme = "catppuccin",
+				options = {
+					theme = "catppuccin",
+					section_separators = { left = "", right = "" },
+				},
 				sections = {
 					lualine_x = {
 						{
