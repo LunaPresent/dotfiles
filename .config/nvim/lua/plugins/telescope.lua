@@ -6,7 +6,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-file-browser.nvim",
-			"nvim-telescope/telescope-ui-select.nvim"
+			"nvim-telescope/telescope-ui-select.nvim",
 		},
 		opts = {
 			defaults = {
@@ -56,6 +56,9 @@ return {
 			vim.keymap.set("n", "<leader>fe",
 				"<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>",
 				{ desc = "Telescope file browser" })
+			vim.keymap.set("n", "<leader>fh",
+				"<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true<cr>.",
+				{ desc = "Telescope file browser (hidden)" })
 		end,
 	},
 }
