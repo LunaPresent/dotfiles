@@ -12,7 +12,7 @@ return {
 				"lspinfo",
 				"noice",
 				"lazygit"
-			}
+			},
 		},
 	},
 }

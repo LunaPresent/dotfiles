@@ -76,11 +76,6 @@ return {
 				"<cmd>bp<bar>sp<bar>bn<bar>bd<cr>",
 				desc = "Delete Current Buffer"
 			},
-			{
-				"<leader>bq",
-				"<cmd>bd!<cr>",
-				desc = "Force Delete Current Buffer"
-			},
 		},
 	},
 }

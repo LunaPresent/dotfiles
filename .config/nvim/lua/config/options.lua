@@ -7,6 +7,7 @@ vim.opt.wrap = false
 vim.opt.scrolloff = 8
 
 -- control options
+vim.opt.confirm = true
 vim.opt.jumpoptions = "view"
 vim.opt.mouse = "a"
 vim.opt.undofile = true
