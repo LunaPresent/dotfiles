@@ -17,7 +17,7 @@ return {
 			formatters_by_ft = {
 				python = { "isort", "black" },
 				rust = { "rustfmt" },
-				sql = { "sql_formatter" },
+				sql = { "prettierd", "prettier", stop_after_first = true },
 				html = { "prettierd", "prettier", stop_after_first = true },
 				css = { "prettierd", "prettier", stop_after_first = true },
 				scss = { "prettierd", "prettier", stop_after_first = true },
@@ -45,7 +45,7 @@ return {
 				prettierd = {
 					env = {
 						PRETTIERD_DEFAULT_CONFIG =
-							vim.fn.stdpath("config") .. "/default/.prettierrc",
+							vim.fn.stdpath("config") .. "/default/.prettierrc.json",
 					},
 				},
 			},
