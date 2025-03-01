@@ -41,6 +41,23 @@ return {
 				["<C-k>"] = { "select_prev", "fallback" },
 				["<C-j>"] = { "select_next", "fallback" },
 			},
+			cmdline = {
+				completion = {
+					menu = {
+						auto_show = true,
+					},
+					list = {
+						selection = { preselect = false, auto_insert = true },
+					},
+				},
+				keymap = {
+					preset = "enter",
+					["<Tab>"] = { "select_and_accept" },
+					["<C-y>"] = { "select_and_accept" },
+					["<C-k>"] = { "select_prev", "fallback" },
+					["<C-j>"] = { "select_next", "fallback" },
+				},
+			},
 		},
 	},
 }
