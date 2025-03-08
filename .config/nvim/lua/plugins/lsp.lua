@@ -38,7 +38,7 @@ return {
 						{ desc = "Show references", buffer = buf })
 					vim.keymap.set("n", "K", vim.lsp.buf.hover,
 						{ desc = "LSP hover", buffer = buf })
-					vim.keymap.set("n", "<leader>lh", vim.lsp.buf.signature_help,
+					vim.keymap.set("n", "<leader>lg", vim.lsp.buf.signature_help,
 						{ desc = "LSP signature help", buffer = buf })
 					vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action,
 						{ desc = "Code actions", buffer = buf })
@@ -46,6 +46,11 @@ return {
 						{ desc = "Type definition", buffer = buf })
 					vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename,
 						{ desc = "Rename", buffer = buf })
+					vim.keymap.set("n", "<leader>lh",
+						function()
+							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+						end,
+						{ desc = "Toggle inlay hints", buffer = buf })
 				end,
 			})
 
