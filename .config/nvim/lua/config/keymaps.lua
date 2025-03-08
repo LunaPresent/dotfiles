@@ -25,6 +25,13 @@ vim.keymap.set("n", "<leader>D", [["_D]], { desc = "Silent delete" })
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank to clipboard" })
 
+vim.keymap.set({ "n", "v" }, "<leader>cp", [["+p]], { desc = "Paste clipboard" })
+vim.keymap.set("n", "<leader>cP", [["+P]], { desc = "Paste clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>cd", [["+d]], { desc = "Delete to clipboard" })
+vim.keymap.set("n", "<leader>cD", [["+D]], { desc = "Delete to clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>cy", [["+y]], { desc = "Yank to clipboard" })
+vim.keymap.set("n", "<leader>cY", [["+Y]], { desc = "Yank to clipboard" })
+
 vim.keymap.set(
 	"n",
 	"<leader>r",
