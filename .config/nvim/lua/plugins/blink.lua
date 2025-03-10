@@ -16,11 +16,17 @@ return {
 				},
 			},
 			sources = {
-				default = { "dadbod", "lsp", "path", "snippets", "buffer", },
+				default = { "dadbod", "lazydev", "lsp", "path", "snippets", "buffer", },
 				providers = {
 					dadbod = {
 						name = "Dadbod",
 						module = "vim_dadbod_completion.blink",
+						score_offset = 100,
+					},
+					lazydev = {
+						name = "LazyDev",
+						module = "lazydev.integrations.blink",
+						score_offset = 100,
 					},
 				},
 			},
