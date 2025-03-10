@@ -1,0 +1,22 @@
+[general]
+import = [
+	"./catppuccin-frappe.toml"
+]
+
+[font]
+normal = { family = "NotoSansM Nerd Font Mono", style = "Regular" }
+bold = { style = "Bold" }
+# disable italic, I don't like it
+italic = { style = "Regular" }
+bold_italic = { style = "Bold" }
+size = 11
+offset = { x = 0, y = -1 }
+
+[window]
+dynamic_padding = true
+decorations = "None"
+opacity = 0.875
+startup_mode = "Maximized"
+
+[colors]
+transparent_background_colors = true
