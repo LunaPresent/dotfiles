@@ -3,13 +3,11 @@ vim.g.mapleader = " "
 vim.keymap.set("i", "jj", "<Esc>", { desc = "Escape insert mode" })
 vim.keymap.set("i", "<C-h>", "<Left>", { desc = "Move cursor left" })
 vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move cursor right" })
-vim.keymap.set("i", "<C-j>", "<Down>", { desc = "Move cursor down" })
-vim.keymap.set("i", "<C-k>", "<Up>", { desc = "Move cursor up" })
 
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move cursor left" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move cursor right" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move cursor down" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move cursor up" })
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Navigate window left" })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Navigate window right" })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Navigate window down" })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Navigate window up" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
