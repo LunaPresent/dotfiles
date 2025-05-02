@@ -13,6 +13,9 @@ return {
 			completion = {
 				list = {
 					selection = { preselect = false, auto_insert = true },
+					cycle = {
+						from_top = false,
+					},
 				},
 			},
 			sources = {
