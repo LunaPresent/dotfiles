@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("i", "jj", "<Esc>", { desc = "Escape insert mode" })
 vim.keymap.set("i", "<C-h>", "<Left>", { desc = "Move cursor left" })
 vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move cursor right" })
 
