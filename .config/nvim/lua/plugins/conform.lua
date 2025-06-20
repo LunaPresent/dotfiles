@@ -28,7 +28,7 @@ return {
 				jsonc = { "prettierd", "prettier", stop_after_first = true },
 				vue = { "prettierd", "prettier", stop_after_first = true },
 				markdown = { "prettierd", "prettier", stop_after_first = true },
-				yaml = { "prettierd", "prettier", stop_after_first = true },
+				yaml = { "yamlfmt", "prettierd", "prettier", stop_after_first = true },
 			},
 			default_format_opts = {
 				lsp_format = "fallback",
@@ -49,6 +49,9 @@ return {
 							vim.fn.stdpath("config") .. "/default/.prettierrc.json",
 					},
 				},
+				yamlfmt = {
+					prepend_args = { "-conf", vim.fn.stdpath("config") .. "/default/yamlfmt.yaml" },
+				}
 			},
 		}
 	end,
