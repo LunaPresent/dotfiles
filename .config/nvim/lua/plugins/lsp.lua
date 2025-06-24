@@ -51,9 +51,11 @@ return {
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 						end,
 						{ desc = "Toggle inlay hints", buffer = buf })
-					vim.keymap.set("n", "<leader>lj", vim.diagnostic.goto_next,
+					vim.keymap.set("n", "<leader>lj",
+						function() vim.diagnostic.jump({ count = 1 }) end,
 						{ desc = "Next diagnostic", buffer = buf })
-					vim.keymap.set("n", "<leader>lk", vim.diagnostic.goto_prev,
+					vim.keymap.set("n", "<leader>lk",
+						function() vim.diagnostic.jump({ count = -1 }) end,
 						{ desc = "Previous diagnostic", buffer = buf })
 					vim.keymap.set("n", "<leader>lD", vim.diagnostic.open_float,
 						{ desc = "Show diagnostics", buffer = buf })
