@@ -11,7 +11,6 @@ return {
 		opts = {
 			ensure_installed = {
 				"lua_ls",
-				"rust_analyzer",
 				"clangd",
 			},
 		},
@@ -57,7 +56,7 @@ return {
 					vim.keymap.set("n", "<leader>lk",
 						function() vim.diagnostic.jump({ count = -1 }) end,
 						{ desc = "Previous diagnostic", buffer = buf })
-					vim.keymap.set("n", "<leader>lD", vim.diagnostic.open_float,
+					vim.keymap.set("n", "<leader>li", vim.diagnostic.open_float,
 						{ desc = "Show diagnostics", buffer = buf })
 				end,
 			})
