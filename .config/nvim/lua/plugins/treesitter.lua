@@ -63,6 +63,7 @@ return {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
+		opts = true,
 	},
 	{
 		"JoosepAlviste/nvim-ts-context-commentstring",
