@@ -62,7 +62,12 @@ return {
 			vim.keymap.set("n", "<leader>fe",
 				"<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>",
 				{ desc = "Telescope file browser" })
+			vim.keymap.set("n", "<leader>fg",
+				builtin.git_commits,
+				{ desc = "Telescope git commits" })
 			vim.keymap.set("n", "<leader>fh",
+				builtin.git_bcommits,
+				{ desc = "Telescope git history" })
 		end,
 	},
 }
