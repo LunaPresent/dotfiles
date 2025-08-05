@@ -18,9 +18,15 @@ return {
 			},
 			extensions = {
 				file_browser = {
+					hidden = true,
 					hijack_netrw = true,
 				},
 				["ui-select"] = {},
+			},
+			pickers = {
+				find_files = {
+					find_command = { "fd", "-tf", "--hidden", "-E", ".git/", "-E", "node_modules/" },
+				},
 			},
 		},
 		config = function(_, opts)
@@ -57,8 +63,6 @@ return {
 				"<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>",
 				{ desc = "Telescope file browser" })
 			vim.keymap.set("n", "<leader>fh",
-				"<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true<cr>.",
-				{ desc = "Telescope file browser (hidden)" })
 		end,
 	},
 }
