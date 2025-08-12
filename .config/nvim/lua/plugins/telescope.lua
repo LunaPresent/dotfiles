@@ -5,7 +5,6 @@ return {
 		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope-file-browser.nvim",
 			"nvim-telescope/telescope-ui-select.nvim",
 		},
 		opts = {
@@ -17,10 +16,6 @@ return {
 				},
 			},
 			extensions = {
-				file_browser = {
-					hidden = true,
-					hijack_netrw = true,
-				},
 				["ui-select"] = {},
 			},
 			pickers = {
@@ -33,7 +28,6 @@ return {
 			local telescope = require("telescope")
 			telescope.setup(opts)
 
-			telescope.load_extension("file_browser")
 			telescope.load_extension("ui-select")
 
 			require("which-key").add({
@@ -59,9 +53,6 @@ return {
 			vim.keymap.set("n", "<leader>fr",
 				builtin.oldfiles,
 				{ desc = "Telescope recent files" })
-			vim.keymap.set("n", "<leader>fe",
-				"<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>",
-				{ desc = "Telescope file browser" })
 			vim.keymap.set("n", "<leader>fg",
 				builtin.git_commits,
 				{ desc = "Telescope git commits" })

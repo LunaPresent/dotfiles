@@ -1,17 +1,11 @@
 return {
 	{
-		"2kabhishek/nerdy.nvim",
-		dependencies = {
-			"stevearc/dressing.nvim",
-			"nvim-telescope/telescope.nvim",
-		},
-		cmd = "Nerdy",
-		keys = {
-			{
-				"<leader>fn",
-				"<cmd>Nerdy<cr>",
-				desc = "Find nerd icons",
-			},
-		},
+		'2kabhishek/nerdy.nvim',
+		cmd = 'Nerdy',
+		opts = {
+			max_recents = 30,      -- Configure recent icons limit
+			add_default_keybindings = true, -- Add default keybindings
+			copy_to_clipboard = false, -- Copy glyph to clipboard instead of inserting
+		}
 	},
 }
