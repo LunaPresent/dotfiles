@@ -62,7 +62,6 @@ return {
 			-- Set to `false` to remove a keymap
 			-- See :help oil-actions for a list of all available actions
 			keymaps = {
-				["<Esc>"] = { "actions.close", mode = "n" },
 				["g?"] = { "actions.show_help", mode = "n" },
 				["<CR>"] = "actions.select",
 				["<C-s>"] = { "actions.select", opts = { vertical = true } },

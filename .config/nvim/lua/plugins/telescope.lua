@@ -20,7 +20,15 @@ return {
 			},
 			pickers = {
 				find_files = {
-					find_command = { "fd", "-tf", "--hidden", "-E", ".git/", "-E", "node_modules/" },
+					find_command = {
+						"fd",
+						"-tf",
+						"--hidden",
+						"-E",
+						".git/",
+						"-E",
+						"node_modules/"
+					},
 				},
 			},
 		},
