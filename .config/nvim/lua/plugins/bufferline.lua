@@ -5,16 +5,26 @@ return {
 		event = "VeryLazy",
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
-		config = function()
+		opts = function()
 			local bufferline = require("bufferline")
-			bufferline.setup({
+			return {
 				options = {
 					style_preset = bufferline.style_preset.no_italic,
 					always_show_bufferline = false,
 					auto_toggle_bufferline = true,
+					groups = {
+						items = {
+							bufferline.groups.builtin.pinned:with({ icon = "" }),
+						}
+					},
+					diagnostics = "nvim_lsp",
 				},
-				highlights = require("catppuccin.groups.integrations.bufferline").get(),
-			})
+				highlights = require("catppuccin.groups.integrations.bufferline").get_theme(),
+			}
+		end,
+		config = function(_, opts)
+			local bufferline = require("bufferline")
+			bufferline.setup(opts)
 
 			require("which-key").add({
 				{ "<leader>b", group = "buffer" }
@@ -52,7 +62,7 @@ return {
 				desc = "Toggle Pin"
 			},
 			{
-				"<leader>bD",
+				"<leader>bj",
 				"<cmd>BufferLineGroupClose ungrouped<cr>",
 				desc = "Delete Non-Pinned Buffers"
 			},
@@ -62,12 +72,12 @@ return {
 				desc = "Delete Other Buffers"
 			},
 			{
-				"<leader>br",
+				"<leader>bl",
 				"<cmd>BufferLineCloseRight<cr>",
 				desc = "Delete Buffers to the Right"
 			},
 			{
-				"<leader>bl",
+				"<leader>bh",
 				"<cmd>BufferLineCloseLeft<cr>",
 				desc = "Delete Buffers to the Left"
 			},

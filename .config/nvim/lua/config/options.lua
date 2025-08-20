@@ -15,7 +15,7 @@ vim.opt.undofile = true
 vim.opt.foldmethod = "marker"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions,globals"
 
 -- file content options
 vim.opt.tabstop = 4
