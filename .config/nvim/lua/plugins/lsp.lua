@@ -35,7 +35,14 @@ return {
 						{ desc = "Go to implementation", buffer = buf })
 					vim.keymap.set("n", "gr", vim.lsp.buf.references,
 						{ desc = "Show references", buffer = buf })
-					vim.keymap.set("n", "K", vim.lsp.buf.hover,
+					vim.keymap.set("n", "K",
+						function()
+							vim.lsp.buf.hover({
+								max_width = 120,
+								border = "rounded",
+								wrap = false,
+							})
+						end,
 						{ desc = "LSP hover", buffer = buf })
 					vim.keymap.set("n", "<leader>lg", vim.lsp.buf.signature_help,
 						{ desc = "LSP signature help", buffer = buf })
