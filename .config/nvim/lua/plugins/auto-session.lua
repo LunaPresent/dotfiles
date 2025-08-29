@@ -11,7 +11,7 @@ return {
 			close_unsupported_windows = true,
 		},
 		keys = {
-			{ "<leader>fs", "<cmd>SessionSearch<cr>", desc = "Pick session to load" }
+			{ "<leader>fs", "<cmd>AutoSession search<cr>", desc = "Pick session to load" }
 		},
 	},
 }

@@ -51,16 +51,16 @@ return {
 							local config_session_filename = "dashboard-config"
 							local full_path = session_dir .. config_session_filename .. ".vim"
 							if vim.fn.filereadable(full_path) == 1 then
-								vim.cmd("SessionRestore " .. config_session_filename)
+								vim.cmd("AutoSession restore " .. config_session_filename)
 							else
 								local config_dir = vim.fn.stdpath("config")
 								vim.api.nvim_set_current_dir(config_dir)
 								vim.cmd("e init.lua")
-								vim.cmd("SessionSave " .. config_session_filename)
+								vim.cmd("AutoSession save " .. config_session_filename)
 							end
 						end,
 					},
-					{ icon = " ", key = "s", desc = "Restore Session", action = "SessionSearch" },
+					{ icon = " ", key = "s", desc = "Restore Session", action = "AutoSession search" },
 					{ icon = "󰒲 ", key = "l", desc = "Lazy", action = "Lazy" },
 					{ icon = " ", key = "q", desc = "Quit", action = "qa" },
 				},
