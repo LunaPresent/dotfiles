@@ -8,9 +8,10 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Navigate window right" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Navigate window down" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Navigate window up" })
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
-vim.keymap.set("v", "<CR>", "<Esc>", { desc = "Escape visual mode" })
+vim.keymap.set("n", "<A-j>", "<cmd>m +1<CR>", { desc = "Move line down" })
+vim.keymap.set("n", "<A-k>", "<cmd>m -2<CR>", { desc = "Move line up" })
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll half page down" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll half page up" })
@@ -39,5 +40,6 @@ vim.keymap.set(
 	{ desc = "Replace all matching" }
 )
 
+vim.keymap.set("v", "<CR>", "<Esc>", { desc = "Escape visual mode" })
 vim.keymap.set("n", "<Esc>", "<cmd>noh<cr>", { desc = "Clear search" })
 vim.keymap.set("n", "<C-c>", "<cmd>noh<cr>", { desc = "Clear search" })
