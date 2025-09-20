@@ -4,7 +4,7 @@ import = [
 ]
 
 [font]
-normal = { family = "NotoSansM Nerd Font Mono", style = "Regular" }
+normal = { family = "NotoSansM Nerd Font", style = "Regular" }
 bold = { style = "Bold" }
 # disable italic, I don't like it
 italic = { style = "Regular" }
