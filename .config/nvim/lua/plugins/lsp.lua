@@ -18,10 +18,9 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspcfg = require("lspconfig")
-			lspcfg.lua_ls.setup({})
-			lspcfg.rust_analyzer.setup({})
-			lspcfg.clangd.setup({})
+			vim.lsp.enable("lua_ls")
+			vim.lsp.enable("rust_analyzer")
+			vim.lsp.enable("clangd")
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
@@ -33,7 +32,7 @@ return {
 						{ desc = "Go to definition", buffer = buf })
 					vim.keymap.set("n", "gi", vim.lsp.buf.implementation,
 						{ desc = "Go to implementation", buffer = buf })
-					vim.keymap.set("n", "gr", vim.lsp.buf.references,
+					vim.keymap.set("n", "<leader>lu", vim.lsp.buf.references,
 						{ desc = "Show references", buffer = buf })
 					vim.keymap.set("n", "K",
 						function()
