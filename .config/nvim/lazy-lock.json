@@ -6,6 +6,7 @@
   "conform.nvim": { "branch": "master", "commit": "b4aab989db276993ea5dcb78872be494ce546521" },
   "dashboard-nvim": { "branch": "master", "commit": "c42fcfbd96dfcaa486c0a0ab52494316f1c31350" },
   "dial.nvim": { "branch": "master", "commit": "78bd73aaf2b9c8f80715a878feaf56f7ffa8b6ff" },
+  "ferris.nvim": { "branch": "main", "commit": "275865530d753a205740804f1ce163af2322db57" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazydev.nvim": { "branch": "main", "commit": "2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c" },
