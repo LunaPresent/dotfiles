@@ -40,7 +40,6 @@ return {
 			keymap = {
 				preset = "enter",
 				["<C-y>"] = { "select_and_accept" },
-				["<C-CR>"] = { "select_and_accept" },
 				["<C-k>"] = { "select_prev", "fallback" },
 				["<C-j>"] = { "select_next", "show" },
 			},
