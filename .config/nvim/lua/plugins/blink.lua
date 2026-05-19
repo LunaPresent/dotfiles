@@ -8,6 +8,9 @@ return {
 		event = { "InsertEnter", "CmdlineEnter" },
 		opts = {
 			completion = {
+				keyword = {
+					range = "full",
+				},
 				list = {
 					selection = { preselect = true, auto_insert = false },
 					cycle = {

@@ -5,7 +5,7 @@ return {
 		opts = function()
 			return {
 				options = {
-					theme = "catppuccin",
+					theme = "catppuccin-nvim",
 					section_separators = { left = "", right = "" },
 				},
 				sections = {

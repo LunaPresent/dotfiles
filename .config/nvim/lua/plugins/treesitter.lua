@@ -7,57 +7,22 @@ return {
 		lazy = vim.fn.argc(-1) == 0,
 		cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
 		config = function()
-			require("nvim-treesitter.install").prefer_git = false
+			local ts = require("nvim-treesitter")
+			local langs = {
+				"c",
+				"lua",
+				"markdown",
+				"rust"
+			}
 
-			require("nvim-treesitter.configs").setup({
-				highlight = { enable = true },
-				indent = { enable = true },
-				ensure_installed = {
-					"bash",
-					"c",
-					"cpp",
-					"css",
-					"c_sharp",
-					"diff",
-					"html",
-					"javascript",
-					"jsdoc",
-					"json",
-					"jsonc",
-					"lua",
-					"luadoc",
-					"luap",
-					"markdown",
-					"markdown_inline",
-					"printf",
-					"python",
-					"query",
-					"regex",
-					"rust",
-					"scss",
-					"sql",
-					"toml",
-					"tsx",
-					"typescript",
-					"vim",
-					"vimdoc",
-					"xml",
-					"yaml",
-				},
-				textobjects = {
-					select = {
-						enable = true,
-						lookahead = true,
+			ts.install(langs)
 
-						keymaps = {
-							-- You can use the capture groups defined in textobjects.scm
-							-- ["af"] = "@function.outer",
-							-- ["if"] = "@function.inner",
-							-- ["ac"] = "@class.outer",
-							-- ["ic"] = "@class.inner",
-						},
-					},
-				},
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = langs,
+				callback = function()
+					vim.treesitter.start()
+					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				end,
 			})
 		end,
 	},
